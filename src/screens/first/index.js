@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
 import {
   Button,
   Container, Icon, Input, InputGroup, Text,
@@ -11,7 +11,7 @@ import {
   Caption,
   Heading,
   Switch,
-  GridRow, Subtitle,
+  GridRow, Subtitle, TextInput,
 } from "@shoutem/ui";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import GoBackHeader from "../../components/goBackHeader";
@@ -23,33 +23,29 @@ import { widthPercentageToDP as wp } from "react-native-responsive-screen";
 const First = ({navigation,route}) => {
 
   return (
-    <Container style={{flex:1}}>
+    <Container style={{flex:1,position:'relative',}}>
     <GoBackHeader title={'Konum'} navigation={navigation}/>
     <View>
-      <View>
-        <View>
-          <Subtitle>Arkadaşını davet eti</Subtitle>
-        </View>
+      <View style={{flexDirection:'row',backgroundColor:'white',marginHorizontal:20,alignItems:'center',justifyContent:'space-between',borderRadius:9,marginVertical:20}}>
+        <View style={{flexDirection:'row',alignItems:'center'}}>
 
-        <View></View>
-        <View></View>
-      </View>
-      <View>
-        <View></View>
-        <View></View>
-      </View>
-      <View>
-        <View>
-          <View></View>
-          <View></View>
+        <Icon name='search' style={{marginLeft:20,marginRight:-20}} />
+
+        <TextInput
+        style={{marginHorizontal:20}}
+        placeholder={'Konumlarda ara'}
+        onChangeText={(text)=>{console.log(text)}}
+      />
         </View>
-        <View>
-          <View></View>
-          <View></View>
-        </View>
+        <Icon name='locate' style={{marginRight:20,color:'#FF8F16'}}/>
+
       </View>
     </View>
+      <Image
+        style={{flex:1, position:'absolute',zIndex:-2,resizeMode:'cover',height:'100%'}}
 
+        source={require('../../images/map.png')}
+      />
     </Container>
   )
 

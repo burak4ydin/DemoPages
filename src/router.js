@@ -24,7 +24,7 @@ const main = ()=>{
   return (
     <Root>
       <NavigationContainer>
-      <Stack.Navigator initialRouteName="Second">
+      <Stack.Navigator initialRouteName="First">
         <Stack.Screen name="First" component={First} options={{headerShown:false}}  />
         <Stack.Screen name="Second" component={Second} options={{headerShown:false}}  />
       </Stack.Navigator>

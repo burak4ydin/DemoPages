@@ -22,6 +22,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen'
+import { Caption, Subtitle } from "@shoutem/ui";
 
 const GoBackHeader = ({title,navigation}) => {
   if(title){
@@ -29,13 +30,19 @@ const GoBackHeader = ({title,navigation}) => {
       <Header style={styles.header}>
         <InputGroup style={styles.headerInputGroup}>
 
-          <Button transparent style={styles.backIconButton} onPress={()=>navigation.goBack()}>
-            <Icon name='arrow-back-outline' style={styles.backIcon} />
-          </Button>
+          <View style={{backgroundColor:'#E7DECC',borderRadius:9}}>
+            <View transparent style={styles.backIconButton2} onPress={()=>navigation.goBack()}>
+              <Icon name='chevron-back-outline' style={styles.backIcon} />
+            </View>
+          </View>
           <View style={styles.headerTitleContainer}>
-            <Text style={styles.headerTitle}> {title}</Text>
+            <Subtitle style={styles.headerTitle}> {title}</Subtitle>
 
           </View>
+
+            <View transparent style={styles.backIconButton2} onPress={()=>navigation.navigate('Second')}>
+              <Caption style={{color:'#FF8F16',fontSize:15}}> Bitti</Caption>
+            </View>
         </InputGroup>
       </Header>
     )
@@ -76,9 +83,9 @@ const styles = StyleSheet.create({
   },
   headerInputGroup: {
     flex: 1,
-    position: 'relative',
     borderBottomWidth: 0,
     justifyContent: 'space-between',
+    marginHorizontal: 20
   },
   headerInputGroup2: {
     flex:1,
@@ -89,26 +96,27 @@ const styles = StyleSheet.create({
   backIconButton: {
     zIndex: 2,
     marginTop: 10,
+
   },
   backIconButton2: {
     zIndex: 2,
     justifyContent:'center',
     alignItems:'center',
+    
   },
   backIcon: {
     color: 'white',
-    fontSize: 30,
+    fontSize: 25,
   },
   headerTitleContainer: {
-    width: wp('100%'),
-    position: 'absolute',
+
     justifyContent: 'center',
     alignItems: 'center'
 
   },
   headerTitle: {
-    fontSize: 25,
-    fontWeight: '400',
+    fontSize: 20,
+    fontWeight: '300',
   },
   headerTitleContainer2: {
     flexDirection:'row',

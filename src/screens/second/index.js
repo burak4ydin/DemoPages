@@ -73,7 +73,7 @@ const Second = ({navigation,route}) => {
           </View>
           <Divider styleName="line" style={{color:'orange',marginVertical:15,borderColor:'gray',borderWidth:1}} />
 
-          <View style={{marginHorizontal:20,borderRadius:6}}>
+          <View style={{marginHorizontal:20,borderRadius:6,marginBottom:20}}>
             <View style={{flexDirection:'row',justifyContent:'space-between'}}>
               <View style={{backgroundColor:'#30343A',padding:20,borderRadius:9,width:'48%'}}>
                 <Subtitle style={{fontSize:21,color:'white',fontWeight:'bold',marginVertical:5}}>100 Jeton </Subtitle>
