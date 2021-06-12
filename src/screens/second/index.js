@@ -21,9 +21,12 @@ import GoBackHeader from "../../components/goBackHeader";
 const Second = ({navigation,route}) => {
 
   return (
-    <Container style={{flex:1,backgroundColor:'#222628'}}>
+    <Container style={{flex:1,backgroundColor:'#222628',position:'relative',zIndex:-3}}>
+
+
       <GoBackHeader navigation={navigation}/>
 
+      <View style={{position:'absolute',width:'100%',height:150,borderRadius:100,backgroundColor:'#4E5258',zIndex:-2,top:0}}></View>
       <Content >
         <View style={{borderTopEndRadius:15,borderTopLeftRadius:15,backgroundColor:'#1E2225',marginHorizontal:20}}>
           <View>

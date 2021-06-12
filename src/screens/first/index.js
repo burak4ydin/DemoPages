@@ -32,7 +32,7 @@ const First = ({navigation,route}) => {
         <Icon name='search' style={{marginLeft:20,marginRight:-20}} />
 
         <TextInput
-        style={{marginHorizontal:20}}
+        // style={{marginHorizontal:20}}
         placeholder={'Konumlarda ara'}
         onChangeText={(text)=>{console.log(text)}}
       />

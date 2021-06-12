@@ -31,18 +31,18 @@ const GoBackHeader = ({title,navigation}) => {
         <InputGroup style={styles.headerInputGroup}>
 
           <View style={{backgroundColor:'#E7DECC',borderRadius:9}}>
-            <View transparent style={styles.backIconButton2} onPress={()=>navigation.goBack()}>
+            <TouchableOpacity transparent style={styles.backIconButton2} onPress={()=>navigation.goBack()}>
               <Icon name='chevron-back-outline' style={styles.backIcon} />
-            </View>
+            </TouchableOpacity>
           </View>
           <View style={styles.headerTitleContainer}>
             <Subtitle style={styles.headerTitle}> {title}</Subtitle>
 
           </View>
 
-            <View transparent style={styles.backIconButton2} onPress={()=>navigation.navigate('Second')}>
+            <TouchableOpacity transparent style={styles.backIconButton2} onPress={()=>navigation.navigate('Second')}>
               <Caption style={{color:'#FF8F16',fontSize:15}}> Bitti</Caption>
-            </View>
+            </TouchableOpacity>
         </InputGroup>
       </Header>
     )
@@ -51,9 +51,9 @@ const GoBackHeader = ({title,navigation}) => {
       <Header style={styles.header2}>
         <InputGroup style={styles.headerInputGroup2}>
           <View style={{backgroundColor:'#44484F',borderRadius:9}}>
-          <View transparent style={styles.backIconButton2} onPress={()=>navigation.goBack()}>
+          <TouchableOpacity transparent style={styles.backIconButton2} onPress={()=>navigation.goBack()}>
             <Icon name='chevron-back-outline' style={styles.backIcon} />
-          </View>
+          </TouchableOpacity>
           </View>
           <View style={styles.headerTitleContainer2}>
             <Text style={styles.headerTitle2}> 322</Text>
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   header2: {
     borderBottomWidth: 0,
-    backgroundColor: '#222629',
+    backgroundColor: '#4E5258',
     marginVertical:10
   },
   headerInputGroup: {
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     zIndex: 2,
     justifyContent:'center',
     alignItems:'center',
-    
+
   },
   backIcon: {
     color: 'white',
